@@ -5,7 +5,7 @@
 Free Fire Ripper is a pre-configured virtual machine (VM) that includes Free Fire and essential tools required for extracting 3D models using NinjaRipper. This project is compatible with Android, macOS, Windows, and Linux.
 
 ### 📢 Important Update
-Due to certain runtime and remote desktop connection challenges, this project now utilizes BlueStacks instead of SmartGaGa. As a result, the setup process may take longer. Please be patient during installation.
+This Project is for learning Purpose only it does'nt promotes to harm any game policies by hacking, ripping and commercial use of in-game assets.
 
 ## 🔥 Features & Requirements
 
