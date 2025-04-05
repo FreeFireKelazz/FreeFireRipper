@@ -7,12 +7,12 @@ on:
       code:
         description: Paste Chrome Remote Desktop Code
         required: true
-      ffserver:
-        description: Choose Your Free Fire Server ( Only For Pro and Advanced )
+      version:
+        description: Choose Your FreeFireRipper Type
         type: choice
         options:
-          - India
-          - Others ( Contact Me to Enlist )
+          - FreeFireRipper-Basic
+          - FreeFireRipper-Pro
       time:
         description: Choose Runtime Duration (in hrs)
         type: choice
