@@ -1,4 +1,4 @@
-# ⭐ Free Fire Ripper
+# ⭐ Free Fire Extract
 
 ## Developed by GWKANG X FreeFireKelazz
 
