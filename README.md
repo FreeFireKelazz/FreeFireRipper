@@ -1,6 +1,6 @@
 # ⭐ Free Fire Ripper
 
-## Developed by GWKANG
+## Developed by GWKANG X FreeFireKelazz
 
 Free Fire Ripper is a pre-configured virtual machine (VM) that includes Free Fire and essential tools required for extracting 3D models using NinjaRipper. This project is compatible with Android, macOS, Windows, and Linux.
 
