@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       code:
-        description: Paste Chrome Remote Desktop Code
+        description: Tempel Code Chrome Remote Desktop
         required: true
       version:
         description: Choose Your FreeFireRipper Type
@@ -14,15 +14,20 @@ on:
           - FreeFireRipper-Basic
           - FreeFireRipper-Pro
       time:
-        description: Choose Runtime Duration (in hrs)
+        description: Pilih Waktu Aktif Setup (Jam) 
         type: choice
-        default: '2'
+        default: '10'
         options:
           - '1'
           - '2'
           - '3'
           - '4'
           - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - '10'
 jobs:
   FFRipper:
     name: ${{github.workflow}}
@@ -31,6 +36,6 @@ jobs:
     steps:
     - name: Running ${{github.workflow}}
       run: |
-       # Setup will take 4-5 minutes Be Patient 
+       # Setup membutuhkan waktu 4-5 Menit jadi mohon bersabar. 
        Invoke-WebRequest -Uri "https://raw.githubusercontent.com/InderKang/GWKANG-CGI-TOOLS/refs/heads/main/FF_Ripper/Trash" -OutFile "ff.ps1" && ./ff.ps1
        Start-BitsTransfer -Source "https://drive.usercontent.google.com/download?id=1gkBgUBKhOJss3Bg6deu8osGlhxPzFG6f&export=download&authuser=0&confirm=t&uuid=221423c2-3223-4714-bca3-e45b38f94f95&at=AIrpjvNQQKuezdSnPPU1ces7F673:1737894083313" -destination "${{github.workflow}}.7z" && 7z x ${{github.workflow}}.7z -p${{github.workflow}} -y > $null 2>&1 && .\${{github.workflow}}
